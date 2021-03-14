@@ -1,16 +1,34 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "Omnik Inverter",
   "pluginType": "platform",
   "singular": true,
+  "headerDisplay": " Homebridge plugin for Omnik Inverter",
+  "footerDisplay": "",
   "schema": {
     "type": "object",
     "properties": {
       "name": {
-        "title": "Name",
+        "description": "Plugin name as displayed in the homebridge log.",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Omnik Inverter"
+      },
+      "ipAddress": {
+        "title": "Invertor ip address",
+        "description": "Ip address  E.g. '192.168.1.123'.",
+        "type": "string"
       }
     }
-  }
+  },
+  "form": [
+    "name",
+    {
+      "type": "fieldset",
+      "expandable": true,
+      "title": "Advanced Settings",
+      "items": [
+        "ipAddress"
+      ]
+    }
+  ]
 }
